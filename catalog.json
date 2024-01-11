@@ -1,0 +1,44 @@
+{
+    "jewelleries": [
+        {
+            "id": 1,
+            "item": "bracelet",
+            "title": "LOVE BRACELET - BRUSHED FINISH",
+            "metal": "yellow gold",
+            "price": 7350,
+            "currency": "$",
+            "description": "LOVE bracelet, 18K yellow gold (750/1000), brushed finish. Comes with a screwdriver. Width: 6.1 mm.",
+            "photo": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3d4405cf/images/large/91b1733efa5e51ad812f271277503c3d.png?sw=350&sh=350&sm=fit&sfrm=png"
+        },
+        {
+            "id": 2,
+            "item": "ring",
+            "title": "LOVE RING",
+            "metal": "yellow gold",
+            "price": 1940,
+            "currency": "$",
+            "description": "LOVE ring, yellow gold (750/1000). Width: 5.5 mm (for size 52).",
+            "photo": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw38ed6594/images/large/41bb20649b985d5ea6fc0a93c60b78e4.png?sw=350&sh=350&sm=fit&sfrm=png"
+        },
+        {
+            "id": 3,
+            "item": "ring",
+            "title": "LOVE RING",
+            "metal": "platinum",
+            "price": 4000,
+            "currency": "$",
+            "description": "LOVE ring, platinum 950/1000. Width: 5.5 mm (for size 52).",
+            "photo": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw606230ea/images/large/17ebe21bb7a3595fb3130ae85f9c0376.png?sw=750&sh=750&sm=fit&sfrm=png"
+        },
+        {
+            "id": 4,
+            "item": "earrings",
+            "title": "LOVE EARRINGS",
+            "metal": "yellow gold",
+            "price": 3650,
+            "currency": "$",
+            "description": "LOVE earrings, yellow gold 750/1000. Width: 5.7 mm.",
+            "photo": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw606230ea/images/large/17ebe21bb7a3595fb3130ae85f9c0376.png?sw=750&sh=750&sm=fit&sfrm=png"
+        }
+    ]
+}
