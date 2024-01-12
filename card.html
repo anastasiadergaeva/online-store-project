@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <title>Карточка товара</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <main class="main">
+        <div class="card">
+            <div class="card__image">
+            </div>
+            <article class="card__description">
+                <h3 class="productname">Название товара</h3>
+                <p class="aboutproduct">Описание товара</p>
+                <p class="productprice">Цена товара</p>
+                <button class="sendbutton">Добавить в корзину</button>
+            </article>
+        </div>
+        <div class="reviews">
+            <h2 class="reviews__header">Вы можете оставить отзыв о товаре</h2>
+            <div class="reviews__input">
+                <input type="text" name="username" id="username" placeholder="Ваше имя">
+            </div>
+            <div class="reviews__comment">
+                <textarea name="review" id="review" placeholder="Ваш отзыв"></textarea>
+            </div>
+            <button class="reviews__button">Отправить</button>
+            <p class="reviews__result"></p>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="assets/script/main.js" type="module"></script>
+</body>
+
+</html>
