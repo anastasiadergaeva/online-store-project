@@ -1,1 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// main начало
+.section-about {
+  position: relative;
+  margin-bottom: 5%;
+}
+
+#text {
+  position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    color: #916517
+}
+
+#photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-link {
+  color: #fff;
+}
+
+.about-buttom {
+  color: #916517;
+}
+
+.carousel {
+  margin-bottom: 10%;
+}
+
+.icon-footer {
+  margin-right: 15px;
+}
+// main конец
