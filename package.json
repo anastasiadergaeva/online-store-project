@@ -12,12 +12,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",
-    "saas": "^1.0.0",
-    "sass": "^1.69.7",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.8"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   }
 }
