@@ -12,7 +12,7 @@ export class CartManager {
   }
 
   add(id) {
-    if (!this.addedItems.includes(id)) {
+    if (!this.has(id)) {
       this.addedItems.push(id);
     }
 
