@@ -80,6 +80,49 @@
     }
 }
 
+.post-container {
+    width: 569px;
+    background-color: #F3F3F3;
+}
+
+.review-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.username {
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: capitalize;
+}
+
+.datetime {
+    color: #3f3e3e;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.comment {
+    color: #000;
+    font-family: Roboto;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: capitalize;
+}
+
 #username {
     box-sizing: border-box;
     width: 100%;
