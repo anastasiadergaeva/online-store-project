@@ -1,3 +1,141 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.main {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.first-image,
+.second-image,
+.third-image {
+  width: 195px;
+  height: 166px;
+  background-color: #C4C4C4;
+  border: 1px solid black;
+}
+
+.card {
+  display: inline-flex;
+  gap: 5em;
+  font-family: 'Roboto', sans-serif;
+
+  &__image {
+      background-color: #C4C4C4;
+      border: 1px solid black;
+      height: 410px;
+      width: 478px;
+  }
+
+  &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+  }
+}
+
+.sendbutton {
+  width: 185px;
+  height: 56px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.reviews {
+  display: grid;
+  grid-template-areas: "header header header header"
+      "input input button empty"
+      "comment comment comment empty"
+      "result result result result";
+  grid-template-columns: 117px 117px 117px 1fr;
+  grid-template-rows: 70px 70px 271px 1fr;
+  font-family: 'Roboto', sans-serif;
+
+  &__header {
+      grid-area: header;
+  }
+
+  &__input {
+      grid-area: input;
+      width: 185px;
+      height: 56px;
+  }
+
+  &__comment {
+      grid-area: comment;
+  }
+
+  &__button {
+      grid-area: button;
+      width: 185px;
+      height: 56px;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+  }
+
+  &__result {
+      grid-area: result;
+  }
+}
+
+.post-container {
+  width: 569px;
+  background-color: #F3F3F3;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.username {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: capitalize;
+}
+
+.datetime {
+  color: #3f3e3e;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.comment {
+  color: #000;
+  font-family: Roboto;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: capitalize;
+}
+
+#username {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+#review {
+  resize: none;
+  width: 555px;
+  height: 171px;
+}

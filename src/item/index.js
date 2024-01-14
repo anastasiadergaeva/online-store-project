@@ -1,6 +1,8 @@
 import { ItemCard } from "../card-view/item-card";
 import { cartManager } from "../cart/cart-manager";
 import catalog from "../catalog/catalog.json";
+import { ReviewManager } from "./review-manager";
+import { initReviews } from "./reviews";
 
 const html = (strings, ...values) => {
   return String.raw(strings, ...values);
@@ -36,3 +38,5 @@ list.querySelectorAll("[data-add-cart-id]").forEach((button) => {
   });
 });
 app.appendChild(list);
+
+initReviews();
