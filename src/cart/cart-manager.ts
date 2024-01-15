@@ -28,6 +28,22 @@ export class CartManager {
   synchronize() {
     console.log("new state: ", this.addedItems);
     localStorage.setItem("cart", JSON.stringify(this.addedItems));
+
+    this.updateCartCounter();
+  }
+
+  updateCartCounter() {
+    const counter = document.getElementById("cartCounter");
+    const hasItems = this.addedItems.length > 0;
+
+    if (counter) {
+      counter.textContent = String(this.addedItems.length);
+      if (hasItems) {
+        counter.classList.remove("hidden");
+      } else {
+        counter.classList.add("hidden");
+      }
+    }
   }
 
   restore() {
@@ -54,4 +70,5 @@ export class CartManager {
 
 const cartManager = new CartManager();
 
+cartManager.updateCartCounter();
 export { cartManager };
