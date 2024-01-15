@@ -1,7 +1,3 @@
-import "/main.scss";
-
-// home page start
-
 const cartIcon = document.querySelector("#cart-icon");
 cartIcon.addEventListener("click", function () {
   window.location.href = "/cart/";
@@ -72,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch data from JSON file
-  fetch("catalog.json")
+  fetch("/catalog/catalog.json")
     .then((response) => response.json())
     .then((receivedData) => {
       data = receivedData; // Store data globally
@@ -97,6 +93,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error loading data:", error));
 });
-
-// carousel end
-// home page end
