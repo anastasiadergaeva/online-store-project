@@ -37,6 +37,56 @@
   margin: 10px;
 }
 
+.carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #f0d7c8; 
+  }
+
+  .carousel-control-prev span,
+  .carousel-control-next span {
+    color: #f0d7c8; 
+  }
+
 .icon-footer {
   margin-right: 15px;
+}
+
+@media (max-width: 785px) {
+
+  #text {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    margin: 2%;
+  }
+
+  .carousel-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .carousel-item .card {
+    width: 48%; 
+    margin-bottom: 1%; 
+  }
+}
+
+@media (max-width: 439px) {
+  .carousel-inner {
+    display: flex;
+    padding: 0 20px; 
+  }
+
+  .card.product-card {
+    width: calc(100% - 40px); 
+    margin: 0 10px; 
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    margin-left: 20px; 
+    margin-right: 20px; 
+  }
 }
