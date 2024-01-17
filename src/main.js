@@ -5,12 +5,33 @@ cartIcon.addEventListener("click", function () {
 
 const linkCard = document.querySelector("#link-to-card");
 linkCard.addEventListener("click", function () {
-  window.location.href = "/card/";
+  window.location.href = "/card-view/";
 });
 
 const linkToCard = document.querySelector("#goods-card");
 linkToCard.addEventListener("click", function () {
-  window.location.href = "/card/";
+  window.location.href = "/card-view/";
+});
+
+// toggler
+
+document.addEventListener("DOMContentLoaded", function () {
+  var navbarToggler = document.querySelector(".navbar-toggler");
+  var navbarCollapse = document.querySelector(".navbar-collapse");
+
+  navbarToggler.addEventListener("click", function () {
+    var isMenuExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
+
+    if (isMenuExpanded) {
+      navbarToggler.setAttribute("aria-expanded", "false");
+      navbarCollapse.classList.remove("show");
+      document.body.style.overflow = "auto"; // Восстанавливаем прокрутку body
+    } else {
+      navbarToggler.setAttribute("aria-expanded", "true");
+      navbarCollapse.classList.add("show");
+      document.body.style.overflow = "hidden"; // Запрещаем прокрутку body
+    }
+  });
 });
 
 // carousel start
@@ -49,13 +70,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update the carousel with product data
   function updateCarousel() {
     carouselInner.innerHTML = "";
-    const productsGroup = [
-      data.jewelleries[(currentIndex + 0) % data.jewelleries.length],
-      data.jewelleries[(currentIndex + 1) % data.jewelleries.length],
-      data.jewelleries[(currentIndex + 2) % data.jewelleries.length],
-    ];
+
+    // Determine the number of cards to display based on screen width
+
+    let cardsPerGroup;
+    if (window.innerWidth > 785) {
+      cardsPerGroup = 3;
+    } else if (window.innerWidth > 439) {
+      cardsPerGroup = 2;
+    } else {
+      cardsPerGroup = 1;
+    }
+
+    const productsGroup = Array.from(
+      { length: cardsPerGroup },
+      (_, index) =>
+        data.jewelleries[(currentIndex + index) % data.jewelleries.length]
+    );
+
     const group = createProductCardsGroup(productsGroup);
     carouselInner.appendChild(group);
+
     // Activate the first item
     carouselInner.firstElementChild.classList.add("active");
   }
@@ -68,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Fetch data from JSON file
-  fetch("/catalog/catalog.json")
+  fetch("./catalog/catalog.json")
     .then((response) => response.json())
     .then((receivedData) => {
       data = receivedData; // Store data globally
