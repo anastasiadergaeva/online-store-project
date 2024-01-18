@@ -26,7 +26,7 @@ const redirectToDir = ({ root }) => ({
 });
 
 export default {
-  base: "/",
+  base: "/online-store-project",
   root: "./src",
   plugins: [redirectToDir({ root })],
   build: {
