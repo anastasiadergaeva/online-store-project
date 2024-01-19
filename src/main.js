@@ -1,3 +1,5 @@
+import catalog from "./catalog/catalog.json";
+console.log(catalog);
 const cartIcon = document.querySelector("#cart-icon");
 cartIcon.addEventListener("click", function () {
   window.location.href = "/cart/";
@@ -87,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       (_, index) =>
         data.jewelleries[(currentIndex + index) % data.jewelleries.length]
     );
-
     const group = createProductCardsGroup(productsGroup);
     carouselInner.appendChild(group);
 
@@ -102,29 +103,40 @@ document.addEventListener("DOMContentLoaded", function () {
       data.jewelleries.length;
   }
 
+  data = catalog;
+  updateCarousel();
+  document.querySelector(".carousel-control-next").addEventListener("click", () => {
+    updateIndex(1);
+    updateCarousel();
+  });
+  document.querySelector(".carousel-control-prev").addEventListener("click", () => {
+    updateIndex(-1);
+    updateCarousel();
+  });
+
   // Fetch data from JSON file
-  fetch("./catalog/catalog.json")
-    .then((response) => response.json())
-    .then((receivedData) => {
-      data = receivedData; // Store data globally
-      // Set initial state
-      updateCarousel();
+  // fetch("./catalog/catalog.json")
+  //   .then((response) => response.json())
+  //   .then((receivedData) => {
+  //     data = receivedData; // Store data globally
+  //     // Set initial state
+  //     updateCarousel();
 
-      // Handle Next button click
-      document
-        .querySelector(".carousel-control-next")
-        .addEventListener("click", () => {
-          updateIndex(1);
-          updateCarousel();
-        });
+  //     // Handle Next button click
+  //     document
+  //       .querySelector(".carousel-control-next")
+  //       .addEventListener("click", () => {
+  //         updateIndex(1);
+  //         updateCarousel();
+  //       });
 
-      // Handle Previous button click
-      document
-        .querySelector(".carousel-control-prev")
-        .addEventListener("click", () => {
-          updateIndex(-1);
-          updateCarousel();
-        });
-    })
-    .catch((error) => console.error("Error loading data:", error));
+  //     // Handle Previous button click
+  //     document
+  //       .querySelector(".carousel-control-prev")
+  //       .addEventListener("click", () => {
+  //         updateIndex(-1);
+  //         updateCarousel();
+  //       });
+  //   })
+  //   .catch((error) => console.error("Error loading data:", error));
 });
