@@ -1,1 +1,1 @@
-# online-store-project
+# Проект "Cartier"
