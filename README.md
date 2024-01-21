@@ -2,8 +2,7 @@
 
 ___
 
-![Header](<img width="910" alt="Header_screen" src="https://github.com/anastasiadergaeva/online-store-project/assets/137817080/16e0844e-5812-437f-8c3a-ab02a8a80343">
-)
+![Header](https://disk.yandex.ru/i/0V6N5P52WDz6UQ)
 
 ___
 
